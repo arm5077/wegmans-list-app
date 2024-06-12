@@ -1,6 +1,12 @@
 export interface Message {
   role: 'user' | 'system' | 'assistant';
-  content: string;
+  content: string | {
+    type: 'text' | 'image_url';
+    text?: string;
+    image_url?: {
+      url: string;
+    };
+  }[];
 }
 export interface Opts {
   messages?: Message[];

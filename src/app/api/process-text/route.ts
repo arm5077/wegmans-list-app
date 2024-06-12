@@ -15,6 +15,8 @@ export async function POST(request: Request) {
     return errorResponse(400, 'The supplied text doesn\'t appear to be a grocery list.')
   }
 
+  console.log(response);
+  
   const embeddings = await getListEmbeddings(items);
   const itemsWithAisles = await matchToAisles(embeddings);
 
