@@ -1,0 +1,29 @@
+@import '@/styles/colors.scss';
+@import '@/styles/vars.scss';
+
+.root {
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+
+  .button {
+    background: $page-background;
+    border: 0;
+    border-bottom: 3px solid $blue;
+    color: black;
+    cursor: pointer;
+    display: block;
+    flex-grow: 1;
+    font-size: 12px;
+    margin: 0;
+    padding: 12px 8px 15px;
+
+    &.active {
+      background-color: $blue;
+      color: $white;
+      font-weight: 900;
+    }
+  }
+}

@@ -9,11 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-hook/window-size": "^3.1.1",
+    "classnames": "^2.5.1",
     "compute-cosine-similarity": "^1.1.0",
     "next": "14.2.3",
     "openai": "^4.49.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
+    "react-markdown": "^9.0.1",
+    "react-transition-group": "^4.4.5",
+    "recoil": "^0.7.7",
+    "sass": "^1.77.5",
     "sharp": "^0.33.4"
   },
   "devDependencies": {

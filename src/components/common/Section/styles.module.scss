@@ -1,0 +1,20 @@
+@import '@/styles/vars.scss';
+
+.root {
+  align-items: center;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  transition: opacity 500s;
+
+  &.flipped {
+    flex-direction: column-reverse;
+  }
+  
+  @media (min-width: $min-width-sm) {
+    flex-direction: row;
+    gap: 112px;
+  }
+}

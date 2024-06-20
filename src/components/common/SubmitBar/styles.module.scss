@@ -1,0 +1,59 @@
+@import '@/styles/colors.scss';
+@import '@/styles/vars.scss';
+
+.root {
+  align-items: center;
+  background-color: $blue;
+  box-sizing: border-box;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  left: 0px;
+  padding: 3px 12px 0px;
+  position: absolute;
+  transition: .25s all;
+  width: 100%;
+
+  button {
+    border: 0px;
+    background-color: $white;
+    color: $blue;
+    cursor: pointer;
+    font-weight: bold;
+    height: 26px;
+    border-radius: 14px;
+    padding: 0px 16px;
+
+    &.minor {
+      border: 1px solid $white;
+      color: $white;
+      background-color: transparent;
+    }
+  }
+}
+
+.button-holder {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.root.loading {
+  button {
+    opacity: .5;
+    pointer-events: none;
+  }
+}
+
+.root.error {
+  background-color: $red;
+  padding: 3px 12px;
+
+  button {
+    color: $red;
+
+    &.minor {
+      color: $white;
+    }
+  }
+}

@@ -1,7 +1,9 @@
 export const TEXT_TO_ITEMS_PROMPT = `
   Please take the following text and do two things:
   1. Decide whether or not this is a grocery list.
-  2. Build an array of each item in the grocery list, separating out the name and quantity of each item.
+  2. Build an array of each item in the grocery list, 
+  separating out the name and quantity of each item, 
+  and formatting the names properly (fixing capitalization, etc.)
     
   Here's the JSON format to export the data: 
   \`\`\`

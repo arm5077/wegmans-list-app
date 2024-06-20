@@ -1,0 +1,42 @@
+@import '@/styles/vars.scss';
+@import '@/styles/colors.scss';
+
+.root {
+  @include module;
+  background: transparent;
+  overflow: hidden;
+  background-color: $white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 24px;
+  width: 100%;
+
+  h2 {
+    color: $black;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0px 0px 4px;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    color: $black;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+}

@@ -21,3 +21,8 @@ export interface ProcessingResponse {
   isGroceryList: boolean;
   items?: Item[];
 }
+
+export interface DataPayload {
+  aisles: AisleList[];
+  items: Item[]
+}

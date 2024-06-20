@@ -1,0 +1,56 @@
+@import '@/styles/colors.scss';
+
+@keyframes bounce {
+  0% {
+    top: -2px;
+  }
+
+  30% {
+    top: -6px;
+  }
+
+  50% {
+    top: -6px;
+  }
+
+  55% { 
+    top: -2px;
+  }
+
+  60% {
+    top: -5px;
+  }
+
+  65% {
+    top: -2px;
+  }
+
+  70% {
+    top: -4px;
+  }
+
+  75% {
+    top: -2px;
+  }
+
+  100% {
+    top: -2px;
+  }
+
+}
+
+.root {
+  align-items: center;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: bold;
+  gap: 4px;
+
+  svg {
+    position: relative;
+    animation: 2s bounce infinite;
+    height: 18px;
+  }
+}

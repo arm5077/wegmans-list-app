@@ -1,18 +1,21 @@
 import sharp from "sharp";
 
-import getListEmbeddings from "@/utils/getListEmbeddings";
-import matchToAisles from "@/utils/matchToAisles";
+import getListEmbeddings from "@/utils/api/getListEmbeddings";
+import matchToAisles from "@/utils/api/matchToAisles";
+import aggregateAisles from "@/utils/api/aggregateAisles";
 
-import { getChatCompletion, getSimpleChatCompletion } from "@/utils/openai";
+import { getChatCompletion, getSimpleChatCompletion } from "@/utils/api/openai";
 import { TEXT_TO_ITEMS_PROMPT, IMAGE_TO_ITEMS_PROMPT } from "@/prompts";
-import { successResponse, errorResponse } from "@/utils/responses";
+import { successResponse, errorResponse } from "@/utils/api/responses";
 
 export async function POST(request: Request) {
-  const { base64Image } = await request.json()
+
+  const { data } = await request.json();
+  const base64Data = data.replace(/^data:image\/\w+;base64,/, '');
   
   let pngBuffer;
   try {
-    const buffer = Buffer.from(base64Image, 'base64');
+    const buffer = Buffer.from(base64Data, 'base64');
     pngBuffer = await sharp(buffer)
       .resize({ width: 1200, withoutEnlargement: true })
       .png()
@@ -48,7 +51,11 @@ export async function POST(request: Request) {
   
   const embeddings = await getListEmbeddings(items);
   const itemsWithAisles = await matchToAisles(embeddings);
+  const aisles = aggregateAisles(itemsWithAisles);
 
-  return successResponse(itemsWithAisles);
+  return successResponse({
+    items,
+    aisles
+  });
 
 }

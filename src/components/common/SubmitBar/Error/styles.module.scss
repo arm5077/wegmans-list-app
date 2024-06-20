@@ -1,0 +1,17 @@
+@import '@/styles/colors.scss';
+
+
+.root {
+  align-items: center;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: bold;
+  gap: 4px;
+
+  svg {
+    position: relative;
+    height: 18px;
+  }
+}
