@@ -39,7 +39,7 @@ const SubmitBar: React.FC<SubmitBarProps> = (props) => {
     <Transition
       in={show}
       nodeRef={nodeRef}
-      addEndListener={()=>{}}
+      timeout={1}
     >
       {(state) => (
         <div
