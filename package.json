@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-hook/window-size": "^3.1.1",
+    "@types/react-transition-group": "^4.4.10",
     "classnames": "^2.5.1",
     "compute-cosine-similarity": "^1.1.0",
     "next": "14.2.3",

@@ -1,15 +1,7 @@
-export interface Message {
-  role: 'user' | 'system' | 'assistant';
-  content: string | {
-    type: 'text' | 'image_url';
-    text?: string;
-    image_url?: {
-      url: string;
-    };
-  }[];
-}
+import OpenAI from 'openai'
+
 export interface Opts {
-  messages?: Message[];
+  messages?: OpenAI.Chat.ChatCompletionMessageParam[];
   model?: string;
   response_format?: {
     type: 'json_object' | 'text'

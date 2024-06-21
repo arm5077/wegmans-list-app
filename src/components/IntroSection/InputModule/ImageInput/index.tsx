@@ -31,7 +31,7 @@ const ImageInput: React.FC<ImageInputProps> = (props) => {
     input: fileToSubmit,
   });
 
-  const onDrop = useCallback(files => {
+  const onDrop = useCallback((files: File[]) => {
     const file = files[0];
     if (file) {
       setFilename(file.name);

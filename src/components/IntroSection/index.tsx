@@ -16,7 +16,7 @@ const IntroSection: React.FC = () => {
     <Section>
       <DisplayText
         headline='Grocery Sorcery'
-        text="Convert your grocery list to an **aisle-by-aisle grocery PLAN,** through the power of AI."
+        text={<span>Convert your grocery list to an <strong>aisle-by-aisle grocery PLAN</strong> through the power of AI.</span>}
         note="*currently only works for the Wisconsin Ave. Wegmans in Washington, D.C., because that’s my grocery store"
         isH1={true}
       />

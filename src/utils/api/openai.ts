@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
-import { Opts, Message } from '@/types/openai';
+import { Opts } from '@/types/openai';
+
 
 export async function getChatCompletion(opts: Opts) {
   const {
@@ -36,7 +37,7 @@ export async function getChatCompletion(opts: Opts) {
 }
 
 export async function getSimpleChatCompletion(content: string, opts?: Opts) {
-  const messages: Message[] = [{
+  const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [{
     role: 'user',
     content,
   }] ;

@@ -21,6 +21,7 @@ const transitionStyles = {
   entered: { opacity: 1, height: '40px', },
   exiting: { opacity: 1, height: '40px', },
   exited: { opacity: 0, height: 0, },
+  unmounted: { opacity: 0, height: 0, }
 }
 
 const SubmitBar: React.FC<SubmitBarProps> = (props) => {
@@ -38,8 +39,9 @@ const SubmitBar: React.FC<SubmitBarProps> = (props) => {
     <Transition
       in={show}
       nodeRef={nodeRef}
+      addEndListener={()=>{}}
     >
-      {(state: 'entering' | 'entered' | 'exiting' | 'exited') => (
+      {(state) => (
         <div
           className={classNames(
             classes.root,

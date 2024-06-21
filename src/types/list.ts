@@ -4,7 +4,7 @@ export interface Item {
   embedding?: number[];
   location?: string;
   category?: string;
-  similarity?: string 
+  similarity?: number; 
 }
 
 export interface AisleList {

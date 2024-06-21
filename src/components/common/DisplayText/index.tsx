@@ -1,4 +1,3 @@
-import Markdown from 'react-markdown';
 import React from 'react';
 
 import classes from './styles.module.scss';
@@ -30,11 +29,11 @@ const DisplayText: React.FC<DisplayTextProps> = (props) => {
     <div className={classes.root}>
       {title}
       <div className={classes.deck}>
-        <Markdown>{text}</Markdown>
+        {text}
         {
           note && (
             <div className={classes.note}>
-              <Markdown>{note}</Markdown>
+              {note}
             </div>
           )
         } 
