@@ -13,7 +13,7 @@ const ResultsSection: React.FC = () => {
       <OutputModule />
       <DisplayText
         headline={<div>Abra-<br/>cadabra!</div>}
-        text='You’re ready for your trip to the grocery story.'
+        text='You’re ready for your trip to the grocery store.'
         isH1={false}
       />
     </Section>

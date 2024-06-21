@@ -16,5 +16,9 @@
   @media (min-width: $min-width-sm) {
     flex-direction: row;
     gap: 112px;
+
+    &.flipped {
+      flex-direction: row;
+    }
   }
 }
