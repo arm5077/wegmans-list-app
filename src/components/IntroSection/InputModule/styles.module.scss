@@ -4,6 +4,11 @@
 .root {
   margin-right: auto;
   margin-left: auto;
+
+  @media (min-width: $min-width-sm) {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 }
 
 .module-wrapper {
