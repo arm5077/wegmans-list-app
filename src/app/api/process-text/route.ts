@@ -12,6 +12,8 @@ export async function POST(request: Request) {
     `${TEXT_TO_ITEMS_PROMPT} ${data}`
   );
 
+  console.log(response);
+
   const { isGroceryList, items } = response;
   if (!isGroceryList) {
     return errorResponse(400, 'The supplied text doesn\'t appear to be a grocery list.')
