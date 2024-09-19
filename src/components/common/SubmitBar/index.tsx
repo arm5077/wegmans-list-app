@@ -18,8 +18,8 @@ interface SubmitBarProps {
 
 const transitionStyles = {
   entering: { opacity: 0, height: 0, },
-  entered: { opacity: 1, height: '40px', },
-  exiting: { opacity: 1, height: '40px', },
+  entered: { opacity: 1, height: '48px', },
+  exiting: { opacity: 1, height: '48px', },
   exited: { opacity: 0, height: 0, },
   unmounted: { opacity: 0, height: 0, }
 }
